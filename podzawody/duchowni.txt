@@ -1,0 +1,11 @@
+duchowny
+biskup
+papież
+kardynał
+ksiądz
+zakonnica
+mnich
+zakonnik
+wikary
+proboszcz
+arcybiskup
