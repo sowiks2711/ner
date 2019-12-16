@@ -1,0 +1,9 @@
+polityk
+marszałek
+premier
+minister
+prezydent
+poseł
+posłanka
+generał
+pułkownik

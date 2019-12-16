@@ -1,0 +1,15 @@
+piosenkarz
+piosenkarka
+muzyk
+wokalista
+wokalistka
+gitarzysta
+gitarzystka
+perkusista
+perkusistka
+basista
+basistka
+pianista
+pianistka
+kompozytor
+kompozytorka

@@ -1,0 +1,6 @@
+lekarz
+lekarka
+chirurg
+kardiochirurg
+neurolog
+kardiolog
