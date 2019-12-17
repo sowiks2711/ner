@@ -1,0 +1,25 @@
+% Liczba znalezionych tagów w naszym rozwiązaniu -> 79704
+
+% Liczba znalezionych tagów w naszym rozwiązaniu -> 79704
+% Liczba znalezionych tagów w ich rozwiązaniu -> 22170
+% Liczba znalezionych unikatowych encji w naszym rozwiązaniu -> 18990
+% Liczba znalezionych unikatowych encji w ich rozwiązaniu -> 1314
+% Liczba znalezionych unikatowych niepojedynczych encji w naszym rozwiązaniu -> 4666
+% Liczba znalezionych unikatowych niepojedynczych encji w ich rozwiązaniu -> 616
+% Liczba pokrywających się encji -> 1130
+% example_docs => [('korpusGAZETA/doc1011', {'marek jackowski'}), ('korpusGAZETA/doc1032', {'jan bury'}), ('korpusGAZETA/doc1039', {'alexander keith'}), ('korpusGAZETA/doc1043', {'james lee'}), ('korpusGAZETA/doc1055', {'stanisław tym'}), ('korpusGAZETA/doc1070', {'anna grodzka'}), ('korpusGAZETA/doc1105', {'anna grodzka'}), ('korpusGAZETA/doc1115', {'dorota kania'}), ('korpusGAZETA/doc1134', {'jan bury'}), ('korpusGAZETA/doc1142', {'krzysztof polkowski'}), ('korpusGAZETA/doc1215', {'agata młynarska'}), ('korpusGAZETA/doc1229', {'dorota kania'}), ('korpusGAZETA/doc125', {'evo morales'}), ('korpusGAZETA/doc1268', {'jan szyszko'}), ('korpusGAZETA/doc1277', {'jan bury'}), ('korpusGAZETA/doc1326', {'dominika wielowieyska'}), ('korpusGAZETA/doc1330', {'dominika wielowieyska'}), ('korpusGAZETA/doc1337', {'dominika wielowieyska'}), ('korpusGAZETA/doc1351', {'cezary pazura'}), ('korpusGAZETA/doc1369', {'cezary pazura'}), ('korpusGAZETA/doc1382', {'stanisław tym'}), ('korpusGAZETA/doc1393', {'jan bury'}), ('korpusGAZETA/doc1398', {'jean-marie le pen'}), ('korpusGAZETA/doc1420', {'karol irzykowski'}), ('korpusGAZETA/doc1450', {'vin baker'}), ('korpusGAZETA/doc1572', {'alexander keith'}), ('korpusGAZETA/doc1633', {'monika brodka', 'czesław śpiewa'}), ('korpusGAZETA/doc1647', {'stefan starzyński'}), ('korpusGAZETA/doc1694', {'dorota kania', 'dominika wielowieyska'}), ('korpusGAZETA/doc172', {'jan filip libicki'})]
+% liczba identycznych dokumentów -> 83
+
+
+marek jackowski, jan bury, alexander keith, james lee, stanisław tym, anna grodzka, anna grodzka, dorota kania, jan bury, krzysztof polkowski, agata młynarska, dorota kania, evo morales, jan szyszko, jan bury, dominika wielowieyska, dominika wielowieyska, dominika wielowieyska, cezary pazura, cezary pazura, stanisław tym, jan bury, jean-marie le pen, karol irzykowski, vin baker, alexander keith, monika brodka, czesław śpiewa, stefan starzyński, dorota kania, dominika wielowieyska, jan filip libicki
+% liczba identycznych dokumentów -> 83
+
+
+Przykłady encji, których wystąpień nie udało się wykryć przy pomocy modelu PolDeepNer, które udało się znaleźć w porównywanej pracy to m. in.
+marek jackowski, jan bury, alexander keith, james lee, stanisław tym, anna grodzka, anna grodzka, dorota kania, jan bury, krzysztof polkowski, agata młynarska, dorota kania, evo morales
+, jan szyszko, jan bury, dominika wielowieyska, dominika wielowieyska, dominika wielowieyska, cezary pazura, cezary pazura, stanisław tym, jan bury, jean-marie le pen, karol irzykowski,
+ vin baker, alexander keith, monika brodka, czesław śpiewa, stefan starzyński, dorota kania, dominika wielowieyska, jan filip libicki.
+
+Analizując te przykłady można zauważyć, że model PolDeepNer miał problem ze znalezieniem wystąpień osób o niepolskich nazwiskach, np. "alexander keith", "james lee". Przykłady nazwisk, które sprawiały trudności tj. "tym", "bury", "pazura", "brodka", "kania", sugerują, że narzędzie nie radziło sobie, kiedy imię lub nazwisko było jednocześnie słowem występującym w języku polskim. Kilka innych przykładów tj. "grodzka", "młynarska" mogły zostać łatwo uznane za nazwę ulic. Problemy mogły sprawiać również nazwiska wieloczłonowe lub dwa imiona, np. "jean-marie le pen", "jan filip libicki".
+
+Złe działanie modelu w tych przypadkach, ma prawdopodobnie źródło w zbiorze danych na których został wytrenowany model. Zbiór wykorzystany w konkursie PolEval miał stosunkowo mało wystąpień zagranicznych nazwisk i model nie był wstanie nauczyć się ich `
