@@ -1,6 +1,6 @@
 import morfeusz2
 morf = morfeusz2.Morfeusz()
-with open("../result_step_001.csv") as f:
+with open("./result_step_001.csv") as f:
     for line in f.readlines():
         columns=line.strip().split(';')
         person_name = columns[1]
